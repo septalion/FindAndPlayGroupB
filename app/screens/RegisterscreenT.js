@@ -111,7 +111,7 @@ export default function RegisterScreenT({ navigation }) {
       
         {//inoput fields and disdplay mesages for if form is not completed properly
         // controlls if the text is visible or not
-         usernameV ? <Text style={ styles.inputTxt}>Please enter a username</Text> :<Text style={styles.inputTxt}></Text>}
+         usernameV ? <Text style={styles.input, styles.inputTxt}>Please enter a username</Text> :<Text style={styles.input, styles.inputTxt}></Text>}
         <TextInput
           style={styles.input}
           onChangeText={(e) => SetUsername(e)}
@@ -119,8 +119,9 @@ export default function RegisterScreenT({ navigation }) {
           underlineColorAndroid="transparent"
           autoCapitalize="none"
           placeholder="Username"
+          placeholderTextColor="#fff"
         />
-        { emailV ? <Text style={ styles.inputTxt}>Please enter a Valid Email</Text> : <Text style={ styles.inputTxt}></Text>}
+        { emailV ? <Text style={styles.input, styles.inputTxt}>Please enter a Valid Email</Text> : <Text style={styles.input, styles.inputTxt}></Text>}
         
         <TextInput
           style={styles.input}
@@ -128,17 +129,19 @@ export default function RegisterScreenT({ navigation }) {
           placeholder="Email"
           placeholderTextColor="#808080"
           autoCapitalize="none"
+          placeholderTextColor="#fff"
         />
-        { passwordV ? <Text style={ styles.inputTxt}>Please enter a Password</Text> : <Text style={ styles.inputTxt}></Text>}
+        { passwordV ? <Text style={styles.input, styles.inputTxt}>Please enter a Password</Text> : <Text style={styles.input, styles.inputTxt}></Text>}
         <TextInput
           style={styles.input}
           onChangeText={(e) => SetPassword(e)}
           placeholder="Password"
           placeholderTextColor="#808080"
           autoCapitalize="none"
+          placeholderTextColor="#fff"
           secureTextEntry={true}
         />
-        { CpasswordV ? <Text style={ styles.inputTxtP}>Please make sure your passwords match</Text> : <Text style={  styles.inputTxtP}></Text>}
+        { CpasswordV ? <Text style={styles.input, styles.inputTxtP}>Please make sure your passwords match</Text> : <Text style={styles.input,  styles.inputTxtP}></Text>}
         <TextInput
           style={styles.input}
           onChangeText={(e) => SetConfirmPassword(e)}
@@ -146,6 +149,7 @@ export default function RegisterScreenT({ navigation }) {
           placeholderTextColor="#808080"
           secureTextEntry={true}
           autoCapitalize="none"
+          placeholderTextColor="#fff"
         />
       </View>
 
